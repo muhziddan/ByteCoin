@@ -7,19 +7,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CoinManagerDelegate {
+    
+    
     
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
-    let coinManager = CoinManager()
+    var coinManager = CoinManager()
+    var coinModel: CoinModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coinManager.delegate = self
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
+    }
+    
+    func updateCurrency(_ coinManager: CoinManager, dataModel: CoinModel) {
+        coinModel = dataModel
+        DispatchQueue.main.async {
+            self.updateUI()
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+    func updateUI() {
+        currencyLabel.text = coinModel?.currency
+        bitcoinLabel.text = String(format: "%.2f", coinModel?.rate ?? 0.0)
+        
     }
 
 
