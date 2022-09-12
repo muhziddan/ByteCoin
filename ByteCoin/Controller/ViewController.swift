@@ -46,6 +46,7 @@ class ViewController: UIViewController, CoinManagerDelegate {
 
 }
 
+//MARK: - UIPickerView DataSorce and Delegate
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
