@@ -58,13 +58,37 @@
 			children = (
 				8F15121F28CB0C500088EDD8 /* AppDelegate.swift */,
 				8F15122128CB0C500088EDD8 /* SceneDelegate.swift */,
-				8F15122328CB0C500088EDD8 /* ViewController.swift */,
-				8F15122528CB0C500088EDD8 /* Main.storyboard */,
+				8F74910128CED2E000CCC8D4 /* Model */,
+				8F7490FF28CED2CE00CCC8D4 /* View */,
+				8F74910028CED2D400CCC8D4 /* Controller */,
 				8F15122828CB0C510088EDD8 /* Assets.xcassets */,
 				8F15122A28CB0C510088EDD8 /* LaunchScreen.storyboard */,
 				8F15122D28CB0C510088EDD8 /* Info.plist */,
 			);
 			path = ByteCoin;
+			sourceTree = "<group>";
+		};
+		8F7490FF28CED2CE00CCC8D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F15122528CB0C500088EDD8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F74910028CED2D400CCC8D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F15122328CB0C500088EDD8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F74910128CED2E000CCC8D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
